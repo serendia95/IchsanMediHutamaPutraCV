@@ -22,6 +22,12 @@ body {
   margin-bottom: 2rem;
 }
 
+.main-header:hover {
+  transform: scale(1.02);
+  background-color: #f1e9ff;
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
 .contact-box {
   background-color: var(--bg-section);
   padding: 1.5rem;
