@@ -1,74 +1,27 @@
-:root {
-  --primary-bg: #ffffff;
-  --secondary-bg: #f9f9f9;
-  --text-color: #1a1a1a;
-  --accent-color: #8E2DE2;
-  --hover-bg: #f1ecff;
-  --shadow: rgba(138, 43, 226, 0.15);
+.container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-      --primary-bg: #1e1e1e;
-      --secondary-bg: #2a2a2a;
-      --text-color: #ffffff;
-      --accent-color: #bb86fc;
-      --hover-bg: #2f1f4a;
-      --shadow: rgba(187, 134, 252, 0.25);
-  }
-}
-
-body {
-  background-color: var(--primary-bg);
-  font-family: "Segoe UI", sans-serif;
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-.main-header {
-  background: linear-gradient(to right, var(--accent-color), #4A00E0);
-  padding: 2rem 1rem;
-  color: white;
-  text-align: center;
-  border-radius: 10px;
-  margin-bottom: 3rem;
-}
-
-.card {
+.left-panel {
+  flex: 0 0 250px;
   background-color: var(--secondary-bg);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  margin-bottom: 3rem;
-  box-shadow: 0 4px 10px var(--shadow);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow);
+  color: var(--text-color);
+  height: 100%;
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
 }
 
-.card:hover {
-  transform: scale(1.015);
-  background-color: var(--hover-bg);
-  box-shadow: 0 6px 20px var(--shadow);
+.right-panel {
+  flex: 1;
 }
 
-.section-title {
-  color: var(--accent-color);
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.subheader {
-  color: var(--accent-color);
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-a {
+.left-panel a {
   color: var(--accent-color);
   text-decoration: none;
 }
