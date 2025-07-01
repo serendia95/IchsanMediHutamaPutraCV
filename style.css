@@ -28,12 +28,13 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 12px var(--shadow);
   margin-bottom: 2.5rem;
+  transition: all 0.3s ease;
 }
 
-.contact-box a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: bold;
+.contact-box:hover {
+  transform: scale(1.02);
+  background-color: #f1e9ff;
+  box-shadow: 0 6px 20px var(--shadow);
 }
 
 .card {
