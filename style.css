@@ -138,3 +138,50 @@ a {
 ul {
   padding-left: 1.2rem;
 }
+
+/* Button Style */
+.download-button {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.download-button button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.download-button button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+  }
+
+  .download-button {
+    display: none; /* Hide button in PDF */
+  }
+
+  .card {
+    page-break-inside: avoid;
+  }
+
+  .main-header, .card, .contact-box {
+    break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  .top-nav-wrapper, .side-nav {
+    display: none !important; /* Hide navs in print */
+  }
+}
