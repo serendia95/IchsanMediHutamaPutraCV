@@ -13,3 +13,28 @@ requiredFiles = [".replit", "replit.nix"]
 [deployment]
 run = ["python3", "main.py"]
 deploymentTarget = "cloudrun"
+
+[workflows]
+runButton = "Run Streamlit"
+
+[[workflows.workflow]]
+name = "Run"
+mode = "sequential"
+author = 44463483
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run main.py --server.enableCORS false"
+
+[[workflows.workflow]]
+name = "Run Streamlit"
+mode = "sequential"
+author = 44463483
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run resume.py"
+
+[[ports]]
+localPort = 8501
+externalPort = 80
