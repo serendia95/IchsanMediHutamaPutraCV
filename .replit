@@ -15,7 +15,7 @@ run = ["python3", "main.py"]
 deploymentTarget = "cloudrun"
 
 [workflows]
-runButton = "Run Streamlit"
+runButton = "Project"
 
 [[workflows.workflow]]
 name = "Run"
@@ -29,14 +29,27 @@ args = "streamlit run main.py --server.enableCORS false"
 [[workflows.workflow]]
 name = "Run Streamlit"
 mode = "sequential"
-author = 44463483
+author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "streamlit run resume.py"
+args = "streamlit run --server.port 5000 --server.address 0.0.0.0 --server.enableCORS false resume.py"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run Streamlit"
 
 [[ports]]
-localPort = 8501
+localPort = 5000
 externalPort = 80
 
 [agent]
