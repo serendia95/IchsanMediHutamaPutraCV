@@ -38,3 +38,6 @@ args = "streamlit run resume.py"
 [[ports]]
 localPort = 8501
 externalPort = 80
+
+[agent]
+expertMode = true
