@@ -1,0 +1,1 @@
+- [Profile photo crop](profile-photo-crop.md) — zoom/crop the image inside its fixed circular frame; do not enlarge the frame itself.
